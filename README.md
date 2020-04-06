@@ -7,7 +7,7 @@ These features allow to emulate the didactical advantages of a chalkboard, even 
 
 ## "Installation"
 
-Download the executable file for Windows, MacOS or Linux from the corresponding directory above. It is the only file in the directory and can be used directly.
+Download the executable file for Linux, MacOS or Windows from the corresponding directory above. It is the only file in the directory and can be used directly.
 
 Alternatively, use the Python script from above. 
 
