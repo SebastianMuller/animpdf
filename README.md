@@ -45,5 +45,5 @@ The rotate option can be helpful if a landscape slide is scanned as if it were i
 
 If using Python directly you can also modify the final line of the script, and use the make_slides command.
 
-There are a number of programs that can be used to edit files before using slidemaker, for example to cut or merge PDF files. A free option is PDFsam Basic https://pdfsam.org/.
+There are a number of programs that can be used to edit files before using Slidemaker, for example to cut or merge PDF files. A free option is PDFsam Basic https://pdfsam.org/.
 
