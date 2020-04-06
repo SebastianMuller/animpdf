@@ -42,7 +42,7 @@ Optional parameters are:
   -h, --help            show the help message and exit
 ```
 
-The option ```--rotate``` option can be helpful if a landscape slide is scanned as if it were in portrait format, and the option ```--flatten``` should be used if the output looks incomplete.
+The option ```--rotate``` can be helpful if a landscape slide is scanned as if it were in portrait format, and the option ```--flatten``` should be used if the output looks incomplete.
 
 If using Python directly you can also modify the final line of the script, and use the ```make_slides``` command.
 
