@@ -8,7 +8,7 @@ These features allow for handwritten presentations that are both quick to prepar
 
 ## "Installation"
 
-Download the executable file for Windows, MacOS or Linux as listed above. It can be used directly.
+Download the executable file for Windows, MacOS or Linux from the corresponding directory above. It is the only file in the directory can be used directly.
 
 Alternatively, use the Python script from above. 
 
