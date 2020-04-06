@@ -28,7 +28,7 @@ Open a terminal window, go to the directory containing the executable file and r
   slidemaker filename
 ```
 
-where filename should not contain '.pdf'. The output then appears in the file filename_slides.pdf.
+where filename is the name of the input file excluding '.pdf'. The output then appears in the file filename_slides.pdf.
 
 Optional parameters are:
 
