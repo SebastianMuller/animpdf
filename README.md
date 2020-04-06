@@ -43,7 +43,7 @@ Optional parameters are:
 
 The option ```--rotate``` can be helpful if a landscape slide is scanned as if it were in portrait format, and the option ```--flatten``` should be used if the output looks incomplete.
 
-If using Python directly you can also modify the final line of the script, and use the ```make_slides``` command.
+If using Python directly you can also modify the final line of the script, and pass the filename and optional parameters to the ```make_slides``` command.
 
 There are a number of programs that can be used to edit files before using Slidemaker, for example to cut or merge PDF files. A free option is PDFsam Basic https://pdfsam.org/.
 
