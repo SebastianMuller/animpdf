@@ -36,14 +36,15 @@ Optional parameters are:
   --rotate ROTATE       rotate input by the angle ROTATE
   --nohistory           do not display previous slide
   --noanim              do not animate line by line
+  --flatten             use this if PDF annotations are missing from the output
   --place PLACE         placement of previous slide: left(default), right, top, bottom
   --addname ADDNAME     change addition to output file name (default: '_slides')
   -h, --help            show the help message and exit
 ```
 
-The rotate option can be helpful if a landscape slide is scanned as if it were in portrait format.
+The option ```--rotate``` option can be helpful if a landscape slide is scanned as if it were in portrait format, and the option ```--flatten``` should be used if the output looks incomplete.
 
-If using Python directly you can also modify the final line of the script, and use the make_slides command.
+If using Python directly you can also modify the final line of the script, and use the ```make_slides``` command.
 
 There are a number of programs that can be used to edit files before using Slidemaker, for example to cut or merge PDF files. A free option is PDFsam Basic https://pdfsam.org/.
 
