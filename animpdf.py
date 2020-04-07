@@ -160,7 +160,7 @@ def anim_pdf_command_line():
     parser.add_argument('--nolines', help = "do not animate line by line", action="store_true")
     parser.add_argument('--flatten', help = "use this if PDF annotations are missing from the output", action="store_true")
     parser.add_argument('--place', help = "placement of previous slide: left(default), right, top, bottom", type=str, default="left")
-    parser.add_argument('--addname', help = "addition to output file name (default: '_slides')", type=str,  default="_anim")
+    parser.add_argument('--addname', help = "addition to output file name (default: '_anim')", type=str,  default="_anim")
     # suppressed less important parameters
     parser.add_argument('--twoscreens', help = SUPPRESS, action="store_true") 
     # by default, for place=left we still start writing on the left in the beginning of the document (similar for placement=top), 
