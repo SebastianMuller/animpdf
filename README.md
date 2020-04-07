@@ -24,17 +24,17 @@ When preparing the slides, note that animpdf believes that elements of text sepa
 Open a terminal window, go to the directory containing the executable file and run the program using
 
 ```
-  slidemaker filename
+  animpdf filename
 ```
 
-where filename is the name of the input file excluding '.pdf'. The output then appears in the file filename_slides.pdf.
+where filename is the name of the input file excluding '.pdf'. The output then appears in the file filename_anim.pdf.
 
 Optional parameters are:
 
 ```
   --rotate ROTATE       rotate input by the angle ROTATE
   --nohistory           do not display previous slide
-  --noanim              do not animate line by line
+  --nolines             do not animate line by line
   --flatten             use this if PDF annotations are missing from the output
   --place PLACE         placement of previous slide: left(default), right, top, bottom
   --addname ADDNAME     change addition to output file name (default: '_slides')
