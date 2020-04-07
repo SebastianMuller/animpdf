@@ -37,7 +37,7 @@ Optional parameters are:
   --nolines             do not animate line by line
   --flatten             use this if PDF annotations are missing from the output
   --place PLACE         placement of previous slide: left(default), right, top, bottom
-  --addname ADDNAME     change addition to output file name (default: '_slides')
+  --addname ADDNAME     change addition to output file name (default: '_anim')
   -h, --help            show the help message and exit
 ```
 
