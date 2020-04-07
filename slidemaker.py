@@ -78,13 +78,8 @@ def endpoints(w,h,pixels):
     return result
                  
 """
-The most important optional arguments are also available as command line options
+The optional arguments are also available as command line options
 and explained in slide_name_command_line()
-
-Additional options:
-two_screens: by default, for placement=left we still start writing on the left in the beginning of the document (similar for placement=top), 
-  this may be undesired if the slides are supposed to appear on separate screens, it is deactivated by setting two_screens=True  
-skip_pages: skip a number of slides in the end
 """
     
 def make_slides(name, rotate=0, history=True, anim=True, flatten=False, place='left', add_name='_slides', two_screens=False, skip=0):
