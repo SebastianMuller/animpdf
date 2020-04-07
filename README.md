@@ -1,7 +1,7 @@
 # animpdf
 
 This is a command line program / Python script that modifies PDF files in a way helpful for presentations. It generates a new PDF file where the text appears line by line (as with the \pause command in LaTeX). It also displays the previous slide next to the current one so that it is possible to refer back. Either of these functions can be switched off if desired.
-These features allow to emulate the didactical advantages of a chalkboard, even for handwritten presentations.
+These features help to emulate the didactical advantages of a chalkboard, even for handwritten presentations.
 
 
 
