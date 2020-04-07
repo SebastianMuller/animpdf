@@ -7,7 +7,7 @@ This is a command line program / Python script that modifies PDF files in a way 
 
 ## "Installation"
 
-Download using 'Clone or download' above. The executables file for Linux, MacOS or Windows can be found in the corresponding directory. They can be used directly.
+Download using 'Clone or download' above. The executables files for Linux, MacOS or Windows can be found in the corresponding directory. They can be used directly.
 
 Alternatively, use the Python script from above. 
 
