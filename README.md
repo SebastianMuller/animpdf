@@ -27,7 +27,7 @@ Open a terminal window, go to the directory containing the executable file and r
   animpdf filename
 ```
 
-where filename is the name of the input file excluding '.pdf'. The output then appears in the file filename_anim.pdf.
+where filename is the name of the input file excluding '.pdf' (plus path if it's not in the same directory). The output then appears in the file filename_anim.pdf.
 
 Optional parameters are:
 
