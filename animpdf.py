@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Version Tue 7 April 2020
+Version Tue 16 April 2020
 
 @author: Sebastian Mueller
 """
@@ -76,13 +76,36 @@ def endpoints(w,h,pixels):
             line = move_until_white(w,h,pixels,line,False) 
         result.append(line-1)
     return result
+
+def background(w,h,pixels):
+    samples = 0
+    if type(pixels[0,0])==int:
+        sum = 0 
+        for line in range(3*sides, h-3*sides):
+            for column in range (3*sides, w-3*sides):
+                pixel = pixels[column,line]
+                if pixel_is_white(pixel):
+                    sum = sum + pixel
+                    samples = samples + 1
+        average = int(round(sum/samples))
+        return (average, average, average)
+    else:
+        sum = [0,0,0]
+        for line in range(3*sides, h-3*sides):
+            for column in range (3*sides, w-3*sides):
+                pixel = pixels[column,line]
+                if pixel_is_white(pixel):
+                    for i in range(3):
+                        sum[i] = sum[i] + pixel[i]
+                    samples = samples + 1
+            average = [0,0,0]
+            for i in range(3):
+                average[i] = int(round(sum[i]/samples))
+        return tuple(average)
     
 def anim_pdf(name, rotate=0, history=True, lines=True, flatten=False, place='left', add_name='_anim', two_screens=False, skip=0):
     # The optional arguments are also available as command line options and explained in anim_pdf_command_line() 
     
-    # create white image
-    Image.new('RGB', (1, 1), (255, 255, 255)).save('white.pdf')
-    white = PdfReader('white.pdf').pages[0] 
     # check whether file exists
     if not isfile(name + '.pdf'):
         raise Exception('File ' + name + '.pdf not found.')
@@ -104,6 +127,11 @@ def anim_pdf(name, rotate=0, history=True, lines=True, flatten=False, place='lef
         gs.pdf2jpg('temp' + str(j)) 
         image = Image.open('temp' + str(j) + '.jpg')
         pixels = image.load()
+        # determine background color from first page (usually white) and create background image
+        if j == 0:
+            bkgr = background(image.size[0], image.size[1], pixels)
+            Image.new('RGB', (1, 1), bkgr).save('white.pdf')
+            white = PdfReader('white.pdf').pages[0]     
         if lines:
             # determine data for animation
             ends = endpoints(image.size[0], image.size[1], pixels)
@@ -152,7 +180,7 @@ def anim_pdf(name, rotate=0, history=True, lines=True, flatten=False, place='lef
     out.write(name + add_name + '.pdf') 
     remove('white.pdf')
 
-def anim_pdf_command_line():
+def anim_pdf_command_line(): 
     parser = ArgumentParser(description = "Adds line by line animations to slides in a PDF file, and displays the previous slide next to the current one")
     parser.add_argument('input', help = "name of input file (without '.pdf')")
     parser.add_argument('--rotate', help = "rotate input by the angle ROTATE", type=int, default=0)
@@ -176,10 +204,3 @@ def anim_pdf_command_line():
     
 anim_pdf_command_line()
 
-
-
- 
-
-
-        
-        
