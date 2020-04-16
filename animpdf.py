@@ -8,7 +8,6 @@ Version Tue 16 April 2020
 
 from os import remove   
 from os.path import isfile
-from sys import argv 
 from subprocess import Popen
 from shutil import which
 from argparse import ArgumentParser, SUPPRESS
