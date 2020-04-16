@@ -203,4 +203,3 @@ def anim_pdf_command_line():
 # anim_pdf(filename)    
     
 anim_pdf_command_line()
-
